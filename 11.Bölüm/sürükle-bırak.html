@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="tersyuz.jpg" width="359" height="324" alt="resim" id="picture" draggable>
+    <p style="float: right; border: 1px solid #999;"><img src="tersyuz.jpg" width="128" height="128" alt="sil" ondragenter="return false"
+        ondragover="return false" ondrop="Delete();"></p>
+
+    <script>
+        function Delete(){
+            let pic=document.querySelector("#picture");
+            pic.parentNode.removeChild(pic);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/semebouw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <a href="#"><img src="https://storage.acerapps.io/app-1496/images/logo.png" alt="Seme BouwBedrijf"></a>
+
+        <div id="menuToggle">
+         
+            <input type="checkbox" id="menuCheckbox" />
+          
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        <!--<input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>-->
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Over Ons</a></li>
+            <li class="drop">
+                <a href="#">Diensten<i class="fas fa-angle-down visible-icon" style="margin-left: 7px; vertical-align: center;"></i></a>
+                <div class="list">
+                    <a href="#">Wanden en plafonds sauzen</a>
+                    <a href="#">Latex Spuiten</a>
+                    <a href="#">Beton ciré</a>
+                    <a href="#">Buitengevel stucwerk</a>
+                    <a href="#">Spachtelputz</a>
+                    <a href="#">Badkamer stucen</a>
+                    <a href="#">Dunpleister</a>
+                    <a href="#">Nieuwbouw stucen</a>
+                    <a href="#">Glad stucwerk en pleisterwerk</a>
+                </div>
+            </li>
+            <li><a href="#">Projecten</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+    
+
+    <script>
+        document.querySelector("#menuCheckbox").addEventListener("click", function(){
+            document.querySelector("nav").classList.toggle("open")
+        })
+    </script>
+
+</body>
+</html>

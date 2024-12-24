@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rules{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            position: relative;
+        }
+
+        .rules:hover{
+            -webkit-animation-name: Renk;
+            -webkit-animation-duration: 4s;
+            animation-name: Renk;
+            animation-duration: 4s;
+        }
+
+        @-webkit-keyframes Renk{
+            0% {background-color: darkgoldenrod;left: 0; top: 0;}
+            25% {background-color: deeppink;left: 200px; top: 0;}
+            50% {background-color: darkgreen;left: 200px; top: 200px;}
+            75% {background-color: darkblue;left: 0; top: 200px;}
+            100% {background-color: black;left: 0; top: 0;}
+        }
+
+        @keyframes Renk{
+            0% {background-color: darkgoldenrod;left: 0; top: 0;}
+            25% {background-color: deeppink;left: 200px; top: 0;}
+            50% {background-color: darkgreen;left: 200px; top: 200px;}
+            75% {background-color: darkblue;left: 0; top: 200px;}
+            100% {background-color: black;left: 0; top: 0;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rules"></div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opera Sekmesi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Temel Stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Hava Durumu */
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.weather:hover {
+  background-color: #bbb;
+}
+
+.weather-icon {
+  font-size: 24px;
+}
+
+.weather-text {
+  margin: 0;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  flex: 1;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-text {
+  margin: 10px;
+  line-height: 1.5;
+  max-height: 3em; /* 2 satır için yükseklik */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Alışveriş Alanı */
+.continue {
+  text-align: center;
+}
+
+.continue-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}
+
+/* Arama Input */
+.search input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.search input:focus {
+  border-bottom-color: #007bff;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Ana Konteyner -->
+  <div class="container">
+    <!-- Hava Durumu Alanı -->
+    <div class="weather">
+      <div class="weather-icon">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <p class="weather-text">Hava Durumu</p>
+    </div>
+
+    <!-- Card Alanı -->
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Resim">
+        <p class="card-text">Bu, iki satırdan uzun olduğunda kesilecek bir metin örneğidir...</p>
+        <span class="card-icon">&gt;</span>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Resim">
+        <p class="card-text">Kısa metin örneği.</p>
+        <span class="card-icon">&gt;</span>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Resim">
+        <p class="card-text">Başka bir metin örneği burada yer almaktadır...</p>
+        <span class="card-icon">&gt;</span>
+      </div>
+    </div>
+
+    <!-- Alışverişe Devam Alanı -->
+    <div class="continue">
+      <button class="continue-button">Alışverişe Devam Et</button>
+    </div>
+
+    <!-- Ara Alanı -->
+    <div class="search">
+      <input type="text" placeholder="Web'de ara...">
+    </div>
+  </div>
+</body>
+</html>

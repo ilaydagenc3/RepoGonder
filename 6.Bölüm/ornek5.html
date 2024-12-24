@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url(images.jpg);
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            overflow-y: auto;
+            height: 100vh;
+        }
+        .search {
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .tbox {
+            width: 100%;
+            height: 30px;
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 15px;
+        }
+        .btn-search {
+            align-self: center;
+            width: 30%;
+        }
+        i {
+            margin-right: 20px;
+            align-self: center;
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            justify-content: center;
+            align-self: flex-end;
+        }
+        .line2{
+            width: 100%;
+            height: 1px;
+            background-color: red;
+            justify-content: center;
+            align-self: flex-end;
+        }
+        .tbox:focus+.line {
+            width: 100%;
+            background-color: red;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin: auto;
+            width: 65vw;
+        }
+        .box-1 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 1rem;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            opacity: 0.7;
+            display: flex;
+            justify-content: flex-end;
+            border-radius: 10px;
+        }
+        .box:hover {
+            opacity: 1;
+        }
+        .no1 {
+            background: url(amazon1.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no2 {
+            background: url(amazon2.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no3 {
+            background: url(amazon3.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no4 {
+            background: url(amazon4.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .metin {
+            width: 150px;
+            height: 20px;
+            margin-left: 20px;
+            display: flex;
+            overflow: hidden;
+            color: white;
+            background: none;
+            border: none;
+            outline: none;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        .no5 {
+            background: url(twitch.png) center center no-repeat;
+            background-size: cover;
+        }
+        .no6 {
+            background: url(discord.png) center center no-repeat;
+            background-size: cover;
+        }
+        .no7 {
+            background: url(youtube.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no8 {
+            background: url(booking.png) center center no-repeat;
+            background-size: cover;
+        }
+        .no9 {
+            background: url(humble.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no10 {
+            background: url(eneba.png) center center no-repeat;
+            background-size: cover;
+        }
+        .no11 {
+            background: url(aliexpress.png) center center no-repeat;
+            background-size: cover;
+        }
+        .no12 {
+            background: url(g2a.png) center center no-repeat;
+            background-size: cover;
+        }
+        .box-2 ,.box-3, .detay{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 1rem;
+        }
+        .box1, .box2, .box3{
+            width: calc((100% / 6) - 0.8333rem)
+        }
+        .no13 {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .no14 {
+            background: url(jetkargola.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no17 {
+            background: url(dosyalar.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .no18 {
+            background: url(drive.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        /* 1400px
+        1200px
+        992px
+        768px
+        576px
+        480px */
+        .no19 {
+            background: url(paytr.png) center center no-repeat;
+            background-size: cover;
+        }
+        .metin2 {
+            width: 100%;
+            height: 20px;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+            background: none;
+            margin-bottom: 10px;
+            text-overflow: ellipsis;
+        }
+        .baslik {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .icon {
+            position: absolute;
+            color: black;
+            display: flex;
+            align-self: flex-start;
+            font-size: 25px;
+            visibility: hidden;
+        }
+        .icon2{
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 20px;
+        }
+        .icon3{
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 20px;
+        }
+        .box:hover .icon {
+            visibility: visible;
+            opacity: 1;
+        }
+        .weather {
+            position: absolute;
+            height: 100px;
+        }
+        .asd:hover+.weather2 {
+            visibility: visible;
+        }
+        .weather2 {
+            visibility: hidden;
+        }
+        .asd:hover {
+            background-color: midnightblue;
+        }
+        .asd:hover .icon2 {
+            visibility: visible;
+        }
+        .pink {
+            color: white;
+        }
+        .asd:hover .pink {
+            color: pink;
+        }
+        .pp {
+            display: inline;
+            font-size: 20px;
+        }
+        summary {
+            color: white;
+            float: left;
+        }
+        .detay {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        details {
+            display: flex;
+            flex-direction: column;
+        }
+        details[open] + .line2{
+            background-color: transparent;
+        }
+        .fa-x{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather">
+            <div class="asd">
+                <div class="icon2"><i class="fa-solid fa-ellipsis icon22"></i></div>
+                <p style="color: white;">Oslo</p>
+                <div class="pink">
+                    <i class="fa-regular fa-sun"></i>
+                    <p class="pp">-10</p>
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                </div>
+            </div>
+            <div class="weather2" style="background-color: midnightblue;">
+                <p style="color: pink;">Güneşli</p>
+                <p style="color: white;">Hava durumu denetimi</p>
+            </div>
+        </div>
+        <div class="search">
+            <i class="fa-brands fa-google"></i>
+            <div class="btn-search">
+                <input type="text" class="tbox" placeholder="Web'de ara">
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="box-1">
+                <details>
+                    <div class="icon3">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-book-open"></i>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <summary>Alışverişe devam edin (4öğe)</summary>
+                    <div class="detay" style="margin-top: 20px;">
+                        <div class="box1">
+                            <div class="box no1">
+                                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                            </div>
+                            <div class="metin2">
+                                https://www.amazon.com.tr/GiftHome-%C4%B0ngiliz-Satran%C3%A7-Katlan%C4%B1r-Desenli/dp/B07RHNTFT8"
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="box no2">
+                                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                            </div>
+                            <div class="metin2">
+                                https://www.amazon.com.tr/Yeti%C5%9Fkinler-%C3%87ocuklar-Manyetik-Ta%C5%9F%C4%B1nabilir-Katlan%C4%B1r/dp/B07W474RBD"
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="box no3">
+                                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                            </div>
+                            <div class="metin2">
+                                https://www.amazon.com.tr/Gifthome-Satran%C3%A7-Fig%C3%BCrl%C3%BC-Sand%C4%B1kl%C4%B1-Tahtas%C4%B1/dp/B08D9DY9PQ"
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="box no4">
+                                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                            </div>
+                            <div class="metin2">
+                                https://www.amazon.com.tr/Osmanl%C4%B1-Bizans-Satran%C3%A7-Katlan%C4%B1r-Tahtas%C4%B1/dp/B07QJSS1YB"
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                <i class="fa-solid fa-x"></i>
+                <div class="line2"></div>
+
+            </div>
+            <div class="box-2">
+                <div class="box2">
+                    <div class="box no5">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">Twitch</div>
+                </div>
+                <div class="box2">
+                    <div class="box no6">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">Discord</div>
+                </div>
+                <div class="box2">
+                    <div class="box no7">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">YouTube</div>
+                </div>
+                <div class="box2">
+                    <div class="box no8">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">Booking</div>
+                </div>
+                <div class="box2">
+                    <div class="box no9">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">Humble Bundle</div>
+                </div>
+                <div class="box2">
+                    <div class="box no10">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">Eneba</div>
+                </div>
+                <div class="box2">
+                    <div class="box no11">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">AliExpress</div>
+                </div>
+                <div class="box2">
+                    <div class="box no12">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin">G2A </div>
+                </div>
+                <div class="box2">
+                    <div class="box no13">+ Bir site ekle</div>
+                    <div class="metin"></div>
+                </div>
+            </div>
+            <div class="baslik" style="padding-left: 20px;">
+                <p>Önerilenler</p>
+            </div>
+            <div class="box-3">
+                <div class="box3">
+                    <div class="box no14">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">http://jetkargola.com/</div>
+                </div>
+                <div class="box3">
+                    <div class="box no15" style="background-color: red;">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">https://www.hosting.com.tr/ </div>
+                </div>
+                <div class="box3">
+                    <div class="box no16" style="background-color: turquoise;">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">https://www.acerpro.com.tr/ </div>
+                </div>
+                <div class="box3">
+                    <div class="box no17">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">docs.google.com </div>
+                </div>
+                <div class="box3">
+                    <div class="box no18">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">drive.google.com </div>
+                </div>
+                <div class="box3">
+                    <div class="box no19">
+                        <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                    <div class="metin2">www.paytr.com </div>
+                </div>
+            </div>
+        </div>
+        <i style="color: grey;" class="fa-solid fa-greater-than"></i>
+    </div>
+</body>
+
+</html>

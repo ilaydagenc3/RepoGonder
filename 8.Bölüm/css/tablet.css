@@ -1,0 +1,10 @@
+.courses .course{
+    height: 20rem;
+}
+
+#training .items .item{
+    font-size: 1.5rem;
+}
+.courses .course .course-image span{
+    font-size: 1rem;
+}

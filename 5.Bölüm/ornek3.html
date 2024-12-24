@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+        }
+         .header {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            background-color:#01227B;
+            padding: 0;
+            z-index: 1;
+            
+        }
+        .header-right a {
+            float: left;
+            color: lightslategray;
+            text-align: center;
+            padding: 30px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+        .resim{
+            width: 80px;
+            height: 30px;
+            object-fit: fill;
+            padding-bottom: 20px;
+        }
+        .header a:hover {
+            
+            color: white;
+        }
+        .header-right {
+            float: right;
+        }
+        .sag{
+            float: left;
+            float: top;
+        }
+        .buton{
+            background-color: lightblue;
+            color: white; 
+            font-size: 20px; 
+            text-align: center;
+            padding-top: 15px;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+       /* .bilgi{
+            background-color: rgb(19, 107, 136);
+            width: 200px;;
+            height: 50px;
+            color: white;
+            border: 2px solid white; 
+            margin-left: 250px;
+            display: flex;
+            justify-content: center;
+        }*/
+        .buton:hover{
+            background-color: blue;
+        }
+
+.banner {
+    position:relative;
+    width: 100%; /* Sayfanın tamamını kaplasın */
+    height: 100vh; /* Yüksekliği ayarla */
+    overflow: hidden; /* Taşan içeriği gizle */
+    cursor: grab;
+}
+
+/* Banner görselini ayarla */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Görselin taşmasını önler */
+}
+
+/* Metin kısmını düzenle */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.5); /* Arka plana yarı şeffaf siyah */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="sag">
+            <a href="resim">
+                <img  src="newsehir.png" alt="">
+            </a>
+        </div>
+        <div class="header-right">
+            
+          <a class="active" href="#home">
+            <i class="fa-regular fa-handshake"></i>
+            Kurumsal
+          </a>
+          <a class="active" href="#contact">
+            <i class="fa-solid fa-circle-nodes"></i>
+            Önemli Bağlantılar
+          </a>
+          <a class="active" href="#news">
+            <i class="fa-regular fa-newspaper"></i>
+            Haberler
+          </a>
+          <a class="active" href="#nevsehir">
+            <i class="fa-solid fa-icons"></i>
+            Nevşehir
+          </a>
+          <a  class="active" href="#iletisim">
+            <i class="fa-solid fa-location-dot"></i>
+            İletişim
+          </a>
+        </div>
+      </div>
+
+    <div class="banner">
+        <img src="newsehir2.jpg" alt="Banner Görseli">
+        <div class="banner-text">
+            <h1>Nevşehirli Öğrencilerimiz</h1>
+            <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Nevşehirli Bürokratlar ve İşadamları Derneği, 2024-2025 Eiğitim Öğretim yılında, Nevşehirli olan ve İstanbul'da ve Ankara'da üniversite kazanan öğrencilere burs imkanı sağlayacak.
+            </p>
+                <button class="buton">Detaylı Bilgi Al</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

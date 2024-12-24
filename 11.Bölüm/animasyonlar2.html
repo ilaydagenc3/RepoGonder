@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rules{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            position: relative;
+            color: white;
+            padding: 15px;
+            -webkit-animation: Move 5s linear 2s intinite alternate;
+            animation: Move 5s linear 2s infinite alternate; 
+        }
+
+        @-webkit-keyframes Move{
+            /* from {left: 0;}
+            to {left: 450px;} */
+            0% {background-color: darkgoldenrod;left: 0; top: 0;}
+            25% {background-color: deeppink;left: 200px; top: 0;}
+            50% {background-color: darkgreen;left: 200px; top: 200px;}
+            75% {background-color: darkblue;left: 0; top: 200px;}
+            100% {background-color: black;left: 0; top: 0;}
+        }
+
+        @keyframes Move{
+            /* from {left: 0;}
+            to {left: 450px;} */
+            0% {background-color: darkgoldenrod;left: 0; top: 0;}
+            25% {background-color: deeppink;left: 200px; top: 0;}
+            50% {background-color: darkgreen;left: 200px; top: 200px;}
+            75% {background-color: darkblue;left: 0; top: 200px;}
+            100% {background-color: black;left: 0; top: 0;}
+        }
+
+        /* .time1{
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+        .time2{
+            -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+        }
+        .time3{
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+        .time4{
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+        .time5{
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="rules">linear</div>
+
+
+    <!-- <div class="rules time1">linear</div>
+    <div class="rules time2">ease</div>
+    <div class="rules time3">ease-in</div>
+    <div class="rules time4">ease-out</div>
+    <div class="rules time5">ease-in-out</div> -->
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url(images.jpg);
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            /*justify-content: flex-start;*/
+            /*align-items: center;*/
+            justify-content: space-between;
+            margin: auto;
+            width: 65vw;
+            overflow-y: auto;
+        }
+        .container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            align-items: center;
+            width: 100vw;
+            overflow-y: auto;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 6rem;
+            opacity: 0.7;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            width: calc((100% / 6) - 0.8333rem);
+        }
+        .box-1, .box-2, .box-3{
+            width: 100%;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            background: center center no-repeat;
+            background-size: cover;
+            border-radius: 1rem;
+        }
+        .search {
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .btn-search {
+            align-self: center;
+            width: 30%;
+        }
+        i {
+            margin-right: 1rem;
+            align-self: center;
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            justify-content: center;
+            align-self: flex-end;
+        }
+        .line2{
+            width: 100%;
+            height: 1px;
+            background-color: red;
+            justify-content: center;
+            align-self: flex-end;
+            margin-bottom: 50px;
+        }
+        .tbox {
+            width: 100%;
+            height: 2rem;
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 1rem;
+        }
+        .tbox:focus+.line {
+            width: 100%;
+            background-color: red;
+        }
+        .metin{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white;
+            background: none;
+            border: none;
+            outline: none;
+            padding-bottom: 1rem;
+            justify-content: center;
+        }
+        .text{
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .icon {
+            position: absolute;
+            color: black;
+            display: flex;
+            align-self: flex-end;
+            font-size: 2rem;
+            visibility: hidden;
+        }
+        .box:hover .icon {
+            visibility: visible;
+            opacity: 1;
+        }
+        .icon2{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+        .icon3{
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 1rem;
+        }
+        .pink {
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+        .weather {
+            position: absolute;
+            /*height: 8rem;*/
+        }
+        .weather2{
+            visibility: hidden;
+        }
+        .weather:hover .pink{
+            color: pink;
+        }
+        .weather:hover{
+            background-color: midnightblue;
+        }
+        .weather:hover .weather2{
+            visibility: visible;
+        }
+        details{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        summary{
+            color: white;
+            float: left;  
+        }
+        details[open] + .line2{
+            background-color: transparent;
+        }
+        details[open] .fa-x{
+            visibility: hidden;
+        }
+        .vsble{
+            visibility: hidden;
+        }
+        details[open] .vsble{
+            visibility: visible;
+        }
+        .space{
+            display: flex; 
+           /* align-content: flex-start; */
+           /* justify-content: center; */
+            width: 17.5vw;
+            height: 7rem;
+        }
+        .box-3{
+            width: 65vw;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="weather">
+        <div class="icon2">
+            <div style="color: white;">Oslo</div>
+            <i class="fa-solid fa-ellipsis icon22"></i>
+        </div>
+        <div class="pink">
+            <i class="fa-regular fa-sun"></i>
+            <p class="pp">-10</p>
+            <i class="fa-solid fa-temperature-arrow-down"></i>
+        </div>
+        <div class="weather2">
+            <p style="color: pink;">Güneşli</p>
+            <p style="color: white;">Hava durumu denetimi</p>
+        </div>
+    </div>
+    <div class="search">
+        <i class="fa-brands fa-google"></i>
+        <div class="btn-search">
+            <input type="text" class="tbox" placeholder="Web'de ara">
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="container">
+        <details>
+            <summary style="display: flex ; justify-content: space-between;">
+                Alışverişe devam edin (4öğe)
+                <div class="icon3">
+                    <i class="fa-regular fa-face-smile vsble"></i>
+                    <i class="fa-solid fa-book-open vsble"></i>
+                    <i class="fa-solid fa-ellipsis vsble"></i>
+                    <i class="fa-solid fa-x"></i>
+                </div>
+            </summary>
+            <div class="box-1">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    <img src="amazon1.jpg" alt="">
+                    <div style="justify-content: flex-start;" class="metin">https://www.amazon.com.tr/GiftHome-%C4%B0ngiliz-Satran%C3%A7-Katlan%C4%B1r-Desenli/dp/B07RHNTFT8"</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    <img src="amazon2.jpg" alt="">
+                    <div style="justify-content: flex-start;" class="metin">https://www.amazon.com.tr/Yeti%C5%9Fkinler-%C3%87ocuklar-Manyetik-Ta%C5%9F%C4%B1nabilir-Katlan%C4%B1r/dp/B07W474RBD"</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    <img src="amazon3.jpg" alt="">
+                    <div style="justify-content: flex-start;" class="metin"> https://www.amazon.com.tr/Gifthome-Satran%C3%A7-Fig%C3%BCrl%C3%BC-Sand%C4%B1kl%C4%B1-Tahtas%C4%B1/dp/B08D9DY9PQ"</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                    <img src="amazon4.jpg" alt="">
+                    <div style="justify-content: flex-start ;" class="metin">https://www.amazon.com.tr/Osmanl%C4%B1-Bizans-Satran%C3%A7-Katlan%C4%B1r-Tahtas%C4%B1/dp/B07QJSS1YB"</div>
+                </div>
+            </div>  
+        </details>
+                <div class="line2"></div>
+        <div class="box-2">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="twitch.png" alt="">
+                <div class="metin">Tiwtch</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="discord.png" alt="">
+                <div class="metin">Discord</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="youtube.jpg" alt="">
+                <div class="metin">YouTube</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="booking.png" alt="">
+                <div class="metin">Booking</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="humble.jpg" alt="">
+                <div class="metin">Humble Bundle</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="eneba.png" alt="">
+                <div class="metin">Eneba</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="aliexpress.png" alt="">
+                <div class="metin">AliExpress</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="g2a.png" alt="">
+                <div class="metin">G2A</div>
+            </div>
+            <div class="box" style="background-color: black; color: white; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                <div class="text">+ Bir site ekle</div>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="space"></div>
+        <div class="box-3">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="jetkargola.jpg" alt="">
+                <div class="metin">http://jetkargola.com</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="kirmizi.jpg" alt="">
+                <div class="metin">https://www.hosting.com.tr/</div>
+            </div>
+            <div class="box">
+                <img src="kirmizi.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <div class="metin">https://www.acerpro.com.tr/</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="dosyalar.jpg" alt="">
+                <div class="metin">docs.google.com</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="drive.jpg" alt="">
+                <div class="metin">drive.google.com</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+                <img src="paytr.png" alt="">
+                <div class="metin">www.paytr.com</div>
+            </div>
+        </div>
+        <div style="padding-left:1rem;" class="space">
+            <i style="color: grey; display: flex; align-self: flex-start;" class="fa-solid fa-greater-than"></i>
+        </div>
+    </div>
+    
+</body>
+</html>

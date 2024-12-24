@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .anadiv{
+            position: relative;
+            margin: 9rem;
+        }
+        .anadiv::before{
+            content: "";
+            position:absolute;
+            top:-2em ;
+            left: -2em;
+            width: 50%;
+            height: 50%;
+            background-color: pink;
+            z-index: -1;
+        }
+        .anadiv::after{
+            content: "";
+            position: absolute;
+            bottom: -2em;
+            right: -2em;
+            width: 50%;
+            height: 50%;
+            background-color: pink;
+            z-index: -1;
+
+        }
+
+       
+
+
+    </style>
+</head>
+<body>
+
+    <div class="anadiv"> 
+            <img class="resim" src="ofis.jpg" alt="ofis çalışanı">    
+    </div>
+
+
+</body>
+</html>

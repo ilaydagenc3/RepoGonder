@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>  
+</head>
+<body>
+    <table style="width: 50%;">
+        <tr>
+            <td><label for="name">Adınız</label></td>
+            <td><input type="text" id="name" name="name"> <br></td> 
+                
+        </tr>
+
+        <tr>
+            <td><label for="surname">Soyadınız</label></td>
+            <td><input type="text" id="surname" name="surname"> <br></td> 
+        </tr>
+        <tr>
+            <td>
+                Yaşınızı Seçiniz
+            </td>
+            <td> <select name="yas" id="yas">
+                <option >17</option>
+                <option >18</option>
+                <option >19</option>
+    
+            </select></td>
+           
+        </tr>
+        <tr>
+            <td>Resim Ekle</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><label for="tc">Tc No</label></td>
+            <td><input type="text" id="tc" name="tc"> <br></td>
+        </tr>
+        <tr>
+            <td>Cinsiyet</td>
+            <td> 
+                E
+                <input type="radio" name="cinsiyet" value="erkek">
+                K
+                <input type="radio" name="cinsiyet" value="kadın"> 
+                </td>
+        </tr>
+
+        <tr>
+            <td>Diller</td>
+            <td>
+                İngilizce
+                <input type="checkbox" name="ingilizce" id="ing">
+                Fransızca
+                <input type="checkbox" name="fransızca" id="fr">
+                 Japonca
+                <input type="checkbox" name="japonca" id="jpn">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Göürüş</td>
+            <td>
+                <textarea name="message" id="message" rows="10" cols="30" placeholder="Görüşünüz bizim için önemlidir. "></textarea>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td colspan="2">
+                <button type="kaydet" >Kaydet</button>
+                <button type="sil">Sil</button>
+            </td>
+
+        </tr>
+    </table>
+    
+</body>
+</html>

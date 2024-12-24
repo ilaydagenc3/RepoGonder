@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transition{
+            /* width: 100px;
+            height: 100px;
+            margin: 20px;
+            padding: 20px;
+            background: darkred;
+            color: #fff;
+            -webkit-transition: all 1s ease-in-out;
+            transition: all 1a ease-in-out; */
+
+            clear: both;
+            width: 95%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+
+        /* .transition:hover{
+             -webkit-transform: translate(150px,150px);
+            transform: translate(150px,150px); 
+
+             -webkit-transform: scale(0.5);
+            transform: scale(0.5); 
+
+             -webkit-transform: rotate(4deg);
+            transform: rotate(45deg); 
+
+            -webkit-transform: skew(30deg);
+            transform: skew(30deg);
+        } */
+
+        .transition div{
+            flex: 1;
+            cursor: pointer;
+            background: darkred;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .transition div:hover{
+            flex: 1.9;
+            background: darkkhaki;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="transition">
+        <div>Sağa kay</div>
+        <div>İki tarafa kay</div>
+        <div>Sola kay</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .normal{
+            width: 400px;
+            height: 150px;
+            background-color: darkolivegreen;
+            border: 1px dotted black;
+            margin: 5px;
+            color: white;
+            padding: 10px;
+        }
+
+        .transform{
+           /* -ms-transform: translate(100px,100px);
+            -webkit-transform: translate(100px,100px);
+            transform: translate(0,0);
+
+            -ms-transform: rotate(10deg);
+            -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+
+            -ms-transform: scale(0.5,0.5);
+            -webkit-transform: scale(0.5,0.5);
+            transform: scale(0.5,0.5);
+
+            -ms-transform: skewX(20deg);
+            -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);*/
+
+            -ms-transform: matrix(2,-0.3,0,1,0,0);
+            -webkit-transform: matrix(2,-0.3,0,1,0,0);
+            transform: matrix(2,-0.3,0,1,0,0);
+        }
+
+        .transform2{
+            /*-ms-transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+
+            -ms-transform: scale(1,1);
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+
+            -ms-transform: skewY(20deg);
+            -webkit-transform: skewY(20deg);
+            transform: skewY(20deg);*/
+
+            -ms-transform: matrix(1,-0.3,0,2,200,10);
+            -webkit-transform: matrix(1,-0.3,0,2,200,10);
+            transform: matrix(1,-0.3,0,2,200,10);
+        }
+
+        .transform3{
+            /*-ms-transform: rotate(60deg);
+            -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+
+            -ms-transform: scale(2,2);
+            -webkit-transform: scale(2,2);
+            transform: scale(2,2);
+
+            -ms-transform: skew(20deg,20deg);
+            -webkit-transform: skew(20deg,20deg);
+            transform: skew(20deg,20deg);*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="normal">
+        Normal olan div
+    </div>
+
+    <div class="normal transform">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Exercitationem sit, voluptatum hic alias odit quo dolorum, adipisci aut voluptatibus debitis expedita facilis similique quia ipsam placeat recusandae nobis? 
+        Et cum odit, quo magni possimus aperiam. Ratione eveniet non esse est expedita quae, nemo consequatur iste, possimus, voluptate odio beatae ab? Voluptatum reiciendis hic aliquid iste placeat. 
+    </div>
+    <div class="normal transform2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Exercitationem sit, voluptatum hic alias odit quo dolorum, adipisci aut voluptatibus debitis expedita facilis similique quia ipsam placeat recusandae nobis? 
+        Et cum odit, quo magni possimus aperiam. Ratione eveniet non esse est expedita quae, nemo consequatur iste, possimus, voluptate odio beatae ab? Voluptatum reiciendis hic aliquid iste placeat. 
+    </div>
+    <!-- <div class="normal transform3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Exercitationem sit, voluptatum hic alias odit quo dolorum, adipisci aut voluptatibus debitis expedita facilis similique quia ipsam placeat recusandae nobis? 
+        Et cum odit, quo magni possimus aperiam. Ratione eveniet non esse est expedita quae, nemo consequatur iste, possimus, voluptate odio beatae ab? Voluptatum reiciendis hic aliquid iste placeat. 
+    </div> -->
+</body>
+</html>

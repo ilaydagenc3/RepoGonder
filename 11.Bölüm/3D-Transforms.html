@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .normal{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /*background-color: darkolivegreen;*/
+            border: 1px solid gray;
+            margin-left: 50px;
+           /* color: white;*/
+            padding: 10px;
+            -webkit-perspective: 100px;
+            perspective: 100px;
+        }
+
+        .normal2{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            margin-left: 50px;
+            padding: 10px;
+            -webkit-perspective: 100px;
+            -webkit-perspective-origin: left;
+            perspective: 100px;
+            perspective-origin: left;
+
+        }
+
+        .transform{
+            /*-webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);*/
+            
+            padding: 50px;
+            position: absolute;
+            border: 1px solid red;
+            background-color: darkgoldenrod;
+            background: rgb(0, 0, 0,0.5);
+            /* -ms-transform:rotate(45deg);
+            -ms-transform-origin: 28% 45%; */
+            -webkit-transform: rotateX(45deg);
+            /*-webkit-transform-origin: 28% 45%;*/
+            -webkit-transform-style:preserve-3d ;
+            transform: rotateX(45deg);
+            /*transform-origin: 10% 45%;*/
+            transform-style:preserve-3d ;
+        }
+
+        /*.transform2{
+            padding: 40px;
+            position: absolute;
+            border: 1px solid black;
+            background-color: darkred;
+
+            -webkit-transform: rotateY(-60deg);
+            transform: rotateY(-60deg);
+        }*/
+    </style>
+</head>
+<body>
+    <!-- <div class="normal">Normal olan div</div>
+    <div class="normal transform">3D Transform</div> -->
+
+    <!-- <div class="normal">
+        <div class="transform">Hello 3D
+            <div class="transform2">Good</div>
+        </div>
+    </div> -->
+
+    <div class="normal">
+        <div class="transform">1.DIV</div>
+    </div>
+    <div class="normal2">
+        <div class="transform">2.DIV</div>
+    </div>
+</body>
+</html>
