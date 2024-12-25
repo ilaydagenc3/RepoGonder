@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/extra.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+
+                <div class="dropdown">
+                    <button type="button" id="dropBtn" class="btn btn-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">Dropdown Buton Kullanımı</button>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end dropdown-menu-xl-start" aria-labelledby="dropBtn">
+                        <li>
+                            <h5 class="dropdown-header">Başlık</h5>
+                        </li>
+                        <li><a href="#" class="dropdown-item">Link</a></li>
+                        <li><a href="#" class="dropdown-item active" aria-current="true">Diğer Link</a></li>
+                        <li><a href="#" class="dropdown-item">Başka Link</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="#" class="dropdown-item">Ayrılmış Link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-lg">Dropdown Buton Kullanımı</button>
+                    <button type="button" id="dropBtn" class="btn btn-danger dropdown-toggle dropdown-toggle-siplit btn-lg" data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    <span class="visually-hidden">Dropdown Buton</span></button>
+                    <ul class="dropdown-menu" aria-labelledby="dropBtn">
+                        <li>
+                            <h5 class="dropdown-header">Başlık 2</h5>
+                        </li>
+                        <li><a href="#" class="dropdown-item disabled" tabindex="-1">Link</a></li>
+                        <li><a href="#" class="dropdown-item">Diğer Link</a></li>
+                        <li><a href="#" class="dropdown-item active" aria-current="true">Başka Link</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="#" class="dropdown-item">Ayrılmış Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
